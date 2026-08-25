@@ -10,9 +10,9 @@ namespace Assignment
 
         void Start()
         {
-            //LCT01_SyntaxArray();
-           //LCT02_ArrayInitialize();
-         //LCT03_SyntaxLoop();
+            // LCT01_SyntaxArray();
+            // LCT02_ArrayInitialize();
+            // LCT03_SyntaxLoop();
             // LCT04_LoopAndArray();
             // LCT05_Syntax2DArray();
             // LCT06_SizeOf2DArray();
@@ -20,33 +20,39 @@ namespace Assignment
         }
 
         #region Lecture
-
- /*     public void LCT01_SyntaxArray()
+        public string[] ironManSuit;
+        public void LCT01_SyntaxArray()
         {
-            string[] _ironMansuit = new string[2];
-            _ironMansuit[0] = "Mark I";
-            _ironMansuit[1] = "Mark II";
-            string tonyStarkWear = _ironMansuit[0];
-            Debug.Log("tonyStarkWear" + ironMansuit[0]);
-            Debug.Log("Room size:" +_ironMansuit.Length);
-            Debug.Log(_ironMansuit[0]);
-            Debug.Log(_ironMansuit[1]);
+            string[] _ironManSuit = new string[2];
+            _ironManSuit[0] = "Mark I";
+            _ironManSuit[1] = "Mark II";
+
+            string tonyStarkWear = _ironManSuit[0];
+            Debug.Log("TonyStark Wear " + tonyStarkWear);
+            Debug.Log("Room size: " + _ironManSuit.Length);
+
+            Debug.Log(_ironManSuit[0]);
+            Debug.Log(_ironManSuit[1]);
+
         }
- */
 
-
-   /*   public void LCT02_ArrayInitialize()
+        public void LCT02_ArrayInitialize()
         {
             string[] spidermanSuits = new string[] { "Classic", "Black Suit", "Iron Spider" };
-            string[] batmanSuits = new string[] { "Classic batman", "White bat" };
+            string[] batmanSuits = new string[2] { "Classic batman", "White bat" };
 
             Debug.Log("Room size: " + spidermanSuits.Length);
             Debug.Log(spidermanSuits[0]);
             Debug.Log(spidermanSuits[1]);
             Debug.Log(spidermanSuits[2]);
 
+            Debug.Log("Room size: " + batmanSuits.Length);
+            Debug.Log(batmanSuits[0]);
+            Debug.Log(batmanSuits[1]);
+            Debug.Log(batmanSuits[2]);
         }
-   */
+
+
         /*
          * จงเขียนโปรแกรมเพื่อแสดงผลลัพธ์ตามที่กำหนด โดยใช้โครงสร้างการวนซ้ำ for loop
          *
@@ -61,59 +67,60 @@ namespace Assignment
          * - จะวนลูปทั้งหมด 10 ครั้ง โดยค่าของ i จะเริ่มต้นที่ 1 และเพิ่มขึ้นทีละ 1 จนถึงค่าเท่ากับ 10
          * - ในแต่ละรอบของลูป จะแสดงข้อความ "<=10 : " ตามด้วยค่าของ i ออกมาทาง Debug.Log
          */
-  /*  public void LCT03_SyntaxLoop()
+        public void LCT03_SyntaxLoop()
         {
             for (int i = 0; i < 10; i++)
+            {
                 Debug.Log("<10 : " + i);
-            {
-                Debug.Log("==========");
-                for (int i = 1; i <= 10; i++) ;
             }
+            Debug.Log("==================");
+            for (int i = 0; i < 10; i++)
             {
-                Debug.Log("<=10 : " + ironMansuit);
+                Debug.Log("<=10 : " + i);
             }
         }
-       */
-        /*
-         * จงเขียนโปรแกรมเพื่อแสดงรายชื่อชุดเกราะ Iron Man โดยใช้ Array และ for loop
-         *
-         * ====== Log by One incrementer ======
-         * for Loop ที่ 1:
-         * ค่า i เพิ่มขึ้น ที่ละ 1
-         *
-         * ====== Log by Two incrementer ======
-         * for Loop ที่ 2:
-         * ค่า i เพิ่มขึ้น ที่ละ 2
-         *
-         * ตัวอย่างผลลัพธ์:
-         *
-         * ====== Log by One incrementer ======
-         * Mark I
-         * Mark II
-         * Mark III
-         * ====== Log by Two incrementer ======
-         * Mark I
-         * Mark III
 
-         *
-         * พารามิเตอร์:
-         * - ironManSuitNames: อาร์เรย์ของชื่อชุดเกราะ Iron Man
-         */
-        [Header("LCT04_LoopAndArray")]
-        public string[] lct04_ironManSuitNames;
+            /*
+             * จงเขียนโปรแกรมเพื่อแสดงรายชื่อชุดเกราะ Iron Man โดยใช้ Array และ for loop
+             *
+             * ====== Log by One incrementer ======
+             * for Loop ที่ 1:
+             * ค่า i เพิ่มขึ้น ที่ละ 1
+             *
+             * ====== Log by Two incrementer ======
+             * for Loop ที่ 2:
+             * ค่า i เพิ่มขึ้น ที่ละ 2
+             *
+             * ตัวอย่างผลลัพธ์:
+             *
+             * ====== Log by One incrementer ======
+             * Mark I
+             * Mark II
+             * Mark III
+             * ====== Log by Two incrementer ======
+             * Mark I
+             * Mark III
+
+             *
+             * พารามิเตอร์:
+             * - ironManSuitNames: อาร์เรย์ของชื่อชุดเกราะ Iron Man
+             */
+            [Header("LCT04_LoopAndArray")]
+            public string[] lct04_ironManSuitNames;
         public void LCT04_LoopAndArray()
         {
-            Debug.Log("========== Log by One increment =========");
-            for (int i = 0;i < lct04_ironManSuitNames.Length;i++)
+            Debug.Log("====== Log by One increment ======");
+            for (int i = 0; i < lct04_ironManSuitNames.Length; i++)
             {
                 Debug.Log(lct04_ironManSuitNames[i]);
             }
-            Debug.Log("========== Log by Two increment =====");
+            Debug.Log("====== Log by Two increment ======");
             for (int i = 0; i < lct04_ironManSuitNames.Length; i += 2)
             {
                 Debug.Log(lct04_ironManSuitNames[i]);
             }
         }
+
 
         /*
          * จงเขียนโปรแกรมภาษา C# เพื่อสร้างอาร์เรย์สองมิติ (2D array)
@@ -148,21 +155,21 @@ namespace Assignment
         public void LCT05_Syntax2DArray()
         {
             int[,] my2DArray = new int[3, 3]
-            {
-                { 1, 2, 3 },
-                { 4, 5, 6 },
-                { 7, 8, 9 },
-
+            {//col 1 2 3
+             //col 0 1 2
+                  {1,2,3},
+                  { 4,5,6},
+                  { 7,8,9},
             };
-            
-            for (int row = 0; row < my2DArray.GetLength(0); row++) ;
+
+            for (int row = 0; row < my2DArray.GetLength(0); row++)
             {
                 string rowStr = "";
-                for (int col = 0; col < my2DArray.GetLength(1); col++) ;
+                for (int col = 0; col < my2DArray.GetLength(1); col++)
                 {
-                    rowStr += my2DArray[row, col]+ ",";
+                    rowStr += my2DArray[row, col];
                 }
-                Debug.Log (rowStr);
+                Debug.Log(rowStr);
             }
         }
 
@@ -193,107 +200,109 @@ namespace Assignment
          * - lct06_my2DArray: อาร์เรย์ 2 มิติ (2D array) แก้ไขค่าได้จาก Inspector
          */
         [Header("LCT06_SizeOf2DArray")]
-  /*      public Grid2DInt lct06_my2DArray = new Grid2DInt
-        {
-            rows = 3,
-            cols = 5,
-            data = new int[] { 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5 }
-        };
-        public void LCT06_SizeOf2DArray()
-        {
-            int[,] my2DArray = lct06_my2DArray(); 
-                int rows = my2DArray.GetLength(0);
-                int cols = my2DArray.GetLength(1);
-                
-        }
-        */
-        /*
-         * จงเขียนโปรแกรมภาษา C# เพื่อแสดงผลลัพธ์ดังภาพต่อไปนี้ โดยใช้ Nested loop
-         * โดยกำหนดให้ มีตัวแปรดังนี้
-         * 
-         * public int columns = 3;
-         * public int rows = 4;
-         * 
-         * ตัวอย่างหน้าตาของ Nested Loop
-         * for (int i = 0; i < 4; i++)
-         * {
-         *     for (int j = 0; j < 3; j++)
-         *     {
-         *        
-         *     }
-         * }
-         * 
-         * ตัวอย่างการ run program:
-         * 
-         * Case 1
-         * Column ...
-         * 3
-         * Row ...
-         * 4
-         * ***
-         * ***
-         * ***
-         * ***
-         * 
-         * Case 2
-         * Column ...
-         * 10
-         * Row ...
-         * 1
-         * **********
-         * 
-         * Case 3
-         * Column ...
-         * 10
-         * Row ...
-         * 10
-         * **********
-         * **********
-         * **********
-         * **********
-         * **********
-         * **********
-         * **********
-         * **********
-         * **********
-         * **********
-         * 
-         * Nested Loop หรือ ลูปซ้อน คือ การนำลูปหนึ่งมาซ้อนอยู่ภายในอีกหนึ่งลูป ทำให้เกิดการวนซ้ำซ้อนกันหลายชั้น ลองนึกภาพเหมือนกล่องใส่กล่องอีกทีหนึ่ง ซึ่งกล่องชั้นในจะวนซ้ำหลายรอบก่อนที่กล่องชั้นนอกจะเปลี่ยนไปหนึ่งรอบ
-         * 
-         * ทำไมต้องใช้ Nested Loop?
-         * - จัดการข้อมูลหลายมิติ: เหมาะสำหรับข้อมูลที่จัดเรียงเป็นตาราง หรือมีโครงสร้างที่ซับซ้อน เช่น อาร์เรย์สองมิติ
-         * - สร้างรูปแบบที่ซ้ำซ้อน: ใช้สร้างรูปแบบต่างๆ เช่น ตารางสูตรคูณ, รูปทรงเรขาคณิต
-         * - แก้ปัญหาที่ซับซ้อน: สามารถนำไปใช้แก้ปัญหาที่ต้องทำการวนซ้ำหลายชั้น
-         * 
-         * ตัวอย่าง:
-         * สมมติว่าเราต้องการพิมพ์ตารางสูตรคูณตั้งแต่ 1 คูณ 1 ถึง 5 คูณ 5 เราสามารถใช้ Nested Loop ได้ดังนี้:
-         * 
-         * for (int i = 1; i <= 5; i++) // ลูปหลัก (วนซ้ำแถว)
-         * {
-         *     for (int j = 1; j <= 5; j++) // ลูปซ้อน (วนซ้ำคอลัมน์)
-         *     {
-         *         Console.Write(i * j + " ");
-         *     }
-         *     Console.WriteLine();
-         * }
-         *
-         * พารามิเตอร์:
-         * - columns: จำนวนคอลัมน์ (หลัก)
-         * - rows: จำนวนแถว
-         */
-        [Header("LCT07_SyntaxNestedLoop")]
-        public int lct07_columns;
-        public int lct07_rows;
-        public void LCT07_SyntaxNestedLoop()
-        {
-            throw new System.NotImplementedException();
-        }
+        public int[,] LCT062DArray;
+            public Grid2DInt lct06_my2DArray = new Grid2DInt
+            {
+                rows = 3,
+                cols = 5,
+                data = new int[] { 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5 }
+            };
+            public void LCT06_SizeOf2DArray()
+            { 
+            int[,] my2DArray = lct06_my2DArray.Get2DArray();
 
-        #endregion
+            int rows = my2DArray.GetLength(0);
+            int cols = my2DArray.GetLength(1);
+            int size = my2DArray.Length;
 
-        public string[] ironMansuit;
-        private int col;
-        private readonly int row;
+            Debug.Log("rows " + rows);
+            Debug.Log("cols " + cols);
+            Debug.Log("size " + size);
+            }
+
+            /*
+             * จงเขียนโปรแกรมภาษา C# เพื่อแสดงผลลัพธ์ดังภาพต่อไปนี้ โดยใช้ Nested loop
+             * โดยกำหนดให้ มีตัวแปรดังนี้
+             * 
+             * public int columns = 3;
+             * public int rows = 4;
+             * 
+             * ตัวอย่างหน้าตาของ Nested Loop
+             * for (int i = 0; i < 4; i++)
+             * {
+             *     for (int j = 0; j < 3; j++)
+             *     {
+             *        
+             *     }
+             * }
+             * 
+             * ตัวอย่างการ run program:
+             * 
+             * Case 1
+             * Column ...
+             * 3
+             * Row ...
+             * 4
+             * ***
+             * ***
+             * ***
+             * ***
+             * 
+             * Case 2
+             * Column ...
+             * 10
+             * Row ...
+             * 1
+             * **********
+             * 
+             * Case 3
+             * Column ...
+             * 10
+             * Row ...
+             * 10
+             * **********
+             * **********
+             * **********
+             * **********
+             * **********
+             * **********
+             * **********
+             * **********
+             * **********
+             * **********
+             * 
+             * Nested Loop หรือ ลูปซ้อน คือ การนำลูปหนึ่งมาซ้อนอยู่ภายในอีกหนึ่งลูป ทำให้เกิดการวนซ้ำซ้อนกันหลายชั้น ลองนึกภาพเหมือนกล่องใส่กล่องอีกทีหนึ่ง ซึ่งกล่องชั้นในจะวนซ้ำหลายรอบก่อนที่กล่องชั้นนอกจะเปลี่ยนไปหนึ่งรอบ
+             * 
+             * ทำไมต้องใช้ Nested Loop?
+             * - จัดการข้อมูลหลายมิติ: เหมาะสำหรับข้อมูลที่จัดเรียงเป็นตาราง หรือมีโครงสร้างที่ซับซ้อน เช่น อาร์เรย์สองมิติ
+             * - สร้างรูปแบบที่ซ้ำซ้อน: ใช้สร้างรูปแบบต่างๆ เช่น ตารางสูตรคูณ, รูปทรงเรขาคณิต
+             * - แก้ปัญหาที่ซับซ้อน: สามารถนำไปใช้แก้ปัญหาที่ต้องทำการวนซ้ำหลายชั้น
+             * 
+             * ตัวอย่าง:
+             * สมมติว่าเราต้องการพิมพ์ตารางสูตรคูณตั้งแต่ 1 คูณ 1 ถึง 5 คูณ 5 เราสามารถใช้ Nested Loop ได้ดังนี้:
+             * 
+             * for (int i = 1; i <= 5; i++) // ลูปหลัก (วนซ้ำแถว)
+             * {
+             *     for (int j = 1; j <= 5; j++) // ลูปซ้อน (วนซ้ำคอลัมน์)
+             *     {
+             *         Console.Write(i * j + " ");
+             *     }
+             *     Console.WriteLine();
+             * }
+             *
+             * พารามิเตอร์:
+             * - columns: จำนวนคอลัมน์ (หลัก)
+             * - rows: จำนวนแถว
+             */
+            [Header("LCT07_SyntaxNestedLoop")]
+            public int lct07_columns;
+            public int lct07_rows;
+            public void LCT07_SyntaxNestedLoop()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            #endregion
 
         private void PrintBoard(string[,] board)
         {
