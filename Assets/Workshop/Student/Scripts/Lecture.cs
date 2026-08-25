@@ -10,9 +10,9 @@ namespace Assignment
 
         void Start()
         {
-            // LCT01_SyntaxArray();
-            // LCT02_ArrayInitialize();
-            // LCT03_SyntaxLoop();
+            //LCT01_SyntaxArray();
+           //LCT02_ArrayInitialize();
+         //LCT03_SyntaxLoop();
             // LCT04_LoopAndArray();
             // LCT05_Syntax2DArray();
             // LCT06_SizeOf2DArray();
@@ -21,16 +21,32 @@ namespace Assignment
 
         #region Lecture
 
-        public void LCT01_SyntaxArray()
+ /*     public void LCT01_SyntaxArray()
         {
-            throw new System.NotImplementedException();
+            string[] _ironMansuit = new string[2];
+            _ironMansuit[0] = "Mark I";
+            _ironMansuit[1] = "Mark II";
+            string tonyStarkWear = _ironMansuit[0];
+            Debug.Log("tonyStarkWear" + ironMansuit[0]);
+            Debug.Log("Room size:" +_ironMansuit.Length);
+            Debug.Log(_ironMansuit[0]);
+            Debug.Log(_ironMansuit[1]);
         }
+ */
 
-        public void LCT02_ArrayInitialize()
+
+   /*   public void LCT02_ArrayInitialize()
         {
-            throw new System.NotImplementedException();
-        }
+            string[] spidermanSuits = new string[] { "Classic", "Black Suit", "Iron Spider" };
+            string[] batmanSuits = new string[] { "Classic batman", "White bat" };
 
+            Debug.Log("Room size: " + spidermanSuits.Length);
+            Debug.Log(spidermanSuits[0]);
+            Debug.Log(spidermanSuits[1]);
+            Debug.Log(spidermanSuits[2]);
+
+        }
+   */
         /*
          * จงเขียนโปรแกรมเพื่อแสดงผลลัพธ์ตามที่กำหนด โดยใช้โครงสร้างการวนซ้ำ for loop
          *
@@ -45,11 +61,19 @@ namespace Assignment
          * - จะวนลูปทั้งหมด 10 ครั้ง โดยค่าของ i จะเริ่มต้นที่ 1 และเพิ่มขึ้นทีละ 1 จนถึงค่าเท่ากับ 10
          * - ในแต่ละรอบของลูป จะแสดงข้อความ "<=10 : " ตามด้วยค่าของ i ออกมาทาง Debug.Log
          */
-        public void LCT03_SyntaxLoop()
+  /*  public void LCT03_SyntaxLoop()
         {
-            throw new System.NotImplementedException();
+            for (int i = 0; i < 10; i++)
+                Debug.Log("<10 : " + i);
+            {
+                Debug.Log("==========");
+                for (int i = 1; i <= 10; i++) ;
+            }
+            {
+                Debug.Log("<=10 : " + ironMansuit);
+            }
         }
-
+       */
         /*
          * จงเขียนโปรแกรมเพื่อแสดงรายชื่อชุดเกราะ Iron Man โดยใช้ Array และ for loop
          *
@@ -79,7 +103,16 @@ namespace Assignment
         public string[] lct04_ironManSuitNames;
         public void LCT04_LoopAndArray()
         {
-            throw new System.NotImplementedException();
+            Debug.Log("========== Log by One increment =========");
+            for (int i = 0;i < lct04_ironManSuitNames.Length;i++)
+            {
+                Debug.Log(lct04_ironManSuitNames[i]);
+            }
+            Debug.Log("========== Log by Two increment =====");
+            for (int i = 0; i < lct04_ironManSuitNames.Length; i += 2)
+            {
+                Debug.Log(lct04_ironManSuitNames[i]);
+            }
         }
 
         /*
@@ -114,7 +147,23 @@ namespace Assignment
          */
         public void LCT05_Syntax2DArray()
         {
-            throw new System.NotImplementedException();
+            int[,] my2DArray = new int[3, 3]
+            {
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 },
+
+            };
+            
+            for (int row = 0; row < my2DArray.GetLength(0); row++) ;
+            {
+                string rowStr = "";
+                for (int col = 0; col < my2DArray.GetLength(1); col++) ;
+                {
+                    rowStr += my2DArray[row, col]+ ",";
+                }
+                Debug.Log (rowStr);
+            }
         }
 
         /*
@@ -144,7 +193,7 @@ namespace Assignment
          * - lct06_my2DArray: อาร์เรย์ 2 มิติ (2D array) แก้ไขค่าได้จาก Inspector
          */
         [Header("LCT06_SizeOf2DArray")]
-        public Grid2DInt lct06_my2DArray = new Grid2DInt
+  /*      public Grid2DInt lct06_my2DArray = new Grid2DInt
         {
             rows = 3,
             cols = 5,
@@ -152,9 +201,12 @@ namespace Assignment
         };
         public void LCT06_SizeOf2DArray()
         {
-            int[,] my2DArray = lct06_my2DArray.Get2DArray();
+            int[,] my2DArray = lct06_my2DArray(); 
+                int rows = my2DArray.GetLength(0);
+                int cols = my2DArray.GetLength(1);
+                
         }
-
+        */
         /*
          * จงเขียนโปรแกรมภาษา C# เพื่อแสดงผลลัพธ์ดังภาพต่อไปนี้ โดยใช้ Nested loop
          * โดยกำหนดให้ มีตัวแปรดังนี้
@@ -238,6 +290,10 @@ namespace Assignment
         }
 
         #endregion
+
+        public string[] ironMansuit;
+        private int col;
+        private readonly int row;
 
         private void PrintBoard(string[,] board)
         {
